@@ -1,0 +1,27 @@
+.about,
+.portfolio,
+.contact {
+  @media only screen and (max-width: 1380px) {
+    font-size: 15px;
+  }
+
+  @media only screen and (max-width: 1145px) {
+    font-size: 13px;
+  }
+
+  @media only screen and (max-width: 750px) {
+    font-size: 11px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 9px;
+  }
+
+  @media only screen and (max-width: 480px) {
+    font-size: 7px;
+  }
+
+  @media only screen and (max-width: 355px) {
+    font-size: 6px;
+  }
+}
