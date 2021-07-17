@@ -3,64 +3,74 @@
   top: 0;
   left: 0;
   z-index: 100000;
-  background-color: red;
   width: 100%;
   height: 100vh;
   overflow: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: white;
 
-  span {
-    position: absolute;
-    top: 2em;
-    right: 3em;
-    cursor: pointer;
-    font-weight: 500;
-    border: 2px solid;
-    padding: 0.5em 1em;
-  }
+  &__top-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3em;
 
-  h1 {
-    margin: 2em 0 0 0;
-    font-size: 3.5em;
-  }
+    span {
+      position: absolute;
+      top: 2em;
+      right: 3em;
+      cursor: pointer;
+      font-weight: 500;
+      border: 2px solid;
+      padding: 0.5em 1em;
+    }
 
-  h2 {
-    margin: 0;
-    font-size: 2em;
-    opacity: 0.3;
-  }
+    h1 {
+      margin: 2em 0 0 0;
+      font-size: 3.5em;
+    }
 
-  &__image {
-    margin: 4em 0;
-    height: 25em;
-    box-shadow: 0 22px 40px rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-  }
+    h2 {
+      margin: 0;
+      font-size: 2em;
+      opacity: 0.3;
+    }
 
-  button {
-    margin-top: 2em;
-    background-color: transparent;
-    width: 15em;
-    font-size: 0.9em;
-    font-weight: 600;
-    padding: 1em 0;
-    cursor: pointer;
+    .project__image {
+      margin: 4em 0;
+      height: 25em;
+      box-shadow: 0 22px 40px rgba(0, 0, 0, 0.5);
+      border-radius: 15px;
+    }
 
-    a {
-      padding: 1em 3.5em;
-      text-decoration: none;
-      color: inherit;
+    button {
+      margin-top: 2em;
+      background-color: transparent;
+      width: 15em;
+      font-size: 0.9em;
+      font-weight: 600;
+      padding: 1em 0;
+      cursor: pointer;
+
+      a {
+        padding: 1em 3.5em;
+        text-decoration: none;
+        color: inherit;
+      }
     }
   }
 
   &__story {
-    margin: 5em 0 0 0;
-    background-color: white;
     padding: 2em;
     color: black;
     font-size: 1.125em;
+
+    h2 {
+      margin: 1em 0 0.2em 0;
+    }
+
+    p {
+      margin: 0;
+    }
   }
 
   @media only screen and (max-width: 750px) {
@@ -70,12 +80,12 @@
     font-size: 11px;
   }
   @media only screen and (max-width: 470px) {
-    &__image {
+    .project__image {
       height: 20em;
     }
   }
   @media only screen and (max-width: 380px) {
-    &__image {
+    .project__image {
       height: 17em;
     }
   }
