@@ -22,7 +22,7 @@ const NavBar = () => {
       document.querySelector(selector).classList.add("active");
   };
 
-  const listener = () => {
+  const classChangeListener = () => {
     const sections = document.querySelectorAll(".section");
 
     // i did minus window.innerHeight / 2 so the CONTACT link could also be highlighted
@@ -35,29 +35,33 @@ const NavBar = () => {
     });
   };
 
-  //Change active class to nav links on scroll
+  //Change active class of nav links on scroll
   useEffect(() => {
-    window.addEventListener("scroll", listener);
+    window.addEventListener("scroll", classChangeListener);
 
-    return () => window.removeEventListener("scroll", listener);
+    return () => window.removeEventListener("scroll", classChangeListener);
   }, []);
 
-  // code to hide the nav bar on scroll down and display on scroll up
+  // Hide the nav bar on scroll down and display it on scroll up
   useEffect(() => {
     let scrollPos = window.pageYOffset;
 
-    window.addEventListener("scroll", () => {
+    const navScrollListener = () => {
       //apply this logic only if the mobile nav bar is hidden
-      if (mobileNavBarRef.current) return;
-
+      if (mobileNavBarRef.current || window.pageYOffset <= 150) return;
       let currentScrollPos = window.pageYOffset;
+
       if (scrollPos > currentScrollPos) {
         document.querySelector(".navBar").className = "navBar navBar--visible";
       } else {
         document.querySelector(".navBar").className = "navBar navBar--hidden";
       }
       scrollPos = currentScrollPos;
-    });
+    };
+
+    window.addEventListener("scroll", navScrollListener);
+
+    return () => window.removeEventListener("scroll", navScrollListener);
   }, []);
 
   return (
