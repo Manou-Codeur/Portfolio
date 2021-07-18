@@ -29,7 +29,7 @@ const About = () => {
         CSS(SASS), JavaScript, React, Redux, Git, GraphQl, and actually i'm
         learning testing. I use firebase for the back end stuff before i start
         my back end career, and become at the end full stack developer. <br /> I
-        do the design of my websites even though i am not a designer.
+        often do the design of my side projects.
       </p>
       <div className="about__images_containner">
         <img

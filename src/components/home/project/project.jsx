@@ -1,5 +1,7 @@
-import ProjectStory from "./projectStory";
 import { useEffect } from "react";
+import { motion } from "framer-motion";
+
+import ProjectStory from "./projectStory";
 
 import "./project.scss";
 
@@ -8,13 +10,19 @@ const Project = ({
   isOpen,
 }) => {
   useEffect(() => {
-    document.body.style.overflowY = "hidden";
+    document.body.classList.add("hide-scroll");
 
-    return () => (document.body.style.overflowY = "initial");
+    return () => document.body.classList.remove("hide-scroll");
   }, []);
 
   return (
-    <div className="project">
+    <motion.div
+      className="project"
+      initial={{ height: "1vh" }}
+      animate={{ height: "100vh" }}
+      transition={{ duration: 1 }}
+      exit={{ height: "1vh" }}
+    >
       <div
         className="project__top-part"
         style={{ backgroundColor: backColor, color: color }}
@@ -22,7 +30,7 @@ const Project = ({
         <span onClick={() => isOpen(false)} style={{ borderColor: color }}>
           Close
         </span>
-        <h1>{projectName}</h1>
+        <h1>{projectName.toUpperCase()}</h1>
         <h2>{projectType}</h2>
         <img
           src={`./imgs/${projectType}.jpg`}
@@ -36,7 +44,7 @@ const Project = ({
         </button>
       </div>
       <ProjectStory projectName={projectName} />
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
 
 import Header from "./header/header";
 import About from "./about/about";
@@ -13,9 +14,11 @@ const Home = () => {
 
   return (
     <div id="home" className="home">
-      {selectedProject && (
-        <Project details={selectedProject} isOpen={setSelectedProject} />
-      )}
+      <AnimatePresence>
+        {selectedProject && (
+          <Project details={selectedProject} isOpen={setSelectedProject} />
+        )}
+      </AnimatePresence>
       <Header />
       <About />
       <Portfolio setSelectedProject={setSelectedProject} />

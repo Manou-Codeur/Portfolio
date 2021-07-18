@@ -5,7 +5,7 @@ export const getStylesAndUrl = projectName => {
       color: "#271c64",
       url: "https://react-e-commerce-app-18fea.web.app/",
     },
-    MYSPASH: {
+    Mysplash: {
       backColor: "#fdf0f2",
       color: "#770012",
       url: "https://myspash-18bb4.web.app/",

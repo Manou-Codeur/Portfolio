@@ -28,7 +28,7 @@ const Portfolio = ({ setSelectedProject }) => {
         />
         <Preview
           details={{
-            projectName: "MYSPASH",
+            projectName: "Mysplash",
             projectType: "Stock Images",
             animate: "left",
           }}
@@ -37,7 +37,7 @@ const Portfolio = ({ setSelectedProject }) => {
         <Preview
           details={{
             projectName: "GitHub_S",
-            projectType: "GitHub Search",
+            projectType: "Search Engine",
             animate: "right",
           }}
           setSelectedProject={setSelectedProject}

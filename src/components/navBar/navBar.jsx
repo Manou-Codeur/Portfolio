@@ -68,7 +68,9 @@ const NavBar = () => {
       transition={{ duration: 1 }}
     >
       <div className="navBar__left-part">
-        <img src="/logo_512.png" alt="logo" />
+        <a href="/">
+          <img src="/logo_512.png" alt="logo" />
+        </a>
       </div>
       <div className="navBar__right-part">
         <Link to="/home#about" className="link abouta">
