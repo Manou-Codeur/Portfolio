@@ -25,7 +25,7 @@ const Header = () => {
         </button>
         <button className="header__resume">
           <a
-            href="https://drive.google.com/file/d/1_oJTBuyRvkT549q27z8vf9p3Unqhf2AH/view?usp=sharing"
+            href="https://drive.google.com/file/d/1kwsJueBypK0iPPg7hwA_aZhOham8psVz/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
           >

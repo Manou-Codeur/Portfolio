@@ -16,8 +16,8 @@ const About = () => {
       </div>
       <h1>ABOUT ME</h1>
       <p data-aos="fade-up">
-        My name is Salim, i study applied statistics at ENSSEA in Algeria, and
-        i'm a self taught front end web developer.
+        My name is Salim, i study Mathematics and Computer science at the
+        University of Paris, and i'm a self taught front end web developer.
       </p>
       <p data-aos="fade-up">
         I taught myself programming since 2019 through online courses, books,
